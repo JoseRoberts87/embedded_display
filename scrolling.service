@@ -1,0 +1,15 @@
+[Unit]
+Description=small display scrolling
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python   /home/pi/Adafruit_Python_SSD1306/examples/dispaly.py
+WorkingDirectory=/home/pi/Adafruit_Python_SSD1306
+StandardOutput=syslog
+StandardError=syslog
+User=pi
+Group=pi
+Restart=always
+
+[Install]
+WantedBy=multi-user.target  
